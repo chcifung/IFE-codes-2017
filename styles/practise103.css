@@ -2,3 +2,24 @@
 	margin: 0;
 	padding: 0;
 }
+
+.container{
+	width: 600px;
+	height: 200px;
+	margin: 220px auto;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	position: relative;
+	float: left;
+	margin: 12px 1px 10px 1px;
+	width: 30px;
+	height: 22px;
+	background-color: red;
+	color: white;
+	text-align: center;
+}
