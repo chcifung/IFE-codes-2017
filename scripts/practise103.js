@@ -1,27 +1,36 @@
 
 //left-in
-function leftin(){
 	var left = document.getElementById("left-in");
-	var newlist = document.createElement("li");
-	var textNode = document.getElementById('number');
+	var right = document.getElementById("right-in");
+	var turnleft = document.getElementById("left-out");
+	var turnright = document.getElementById("right-out");
 	var list = document.getElementById("list");
-	left.onclick = function(){
+	var newlist = document.createElement("li");
+
+	function newItem(){
+	
+		var textNode = document.createTextNode(number.value);
+	
 		newlist.appendChild(textNode);
+
+		}
+
+	
+	left.onclick = function (){
+		newItem();
 		list.insertBefore(newlist,list.childNodes[0]);
 	}
 
-}
-
-function rightin(){
-	var right = document.getElementById("right-in");
-	var newlist = document.createElement("li");
-	var textNode = document.getElementById('number');
-	var list = document.getElementById("list");
 	right.onclick = function(){
-		newlist.appendChild(textNode);
-		list.insertBefore(newlist,list.childNodes[list.length]);
+		newItem();
+		list.appendChild(newlist);
 	}
-}
 
-leftin();
-rightin();
+	turnleft.onclick = function(){
+		list.removeChild(list.childNodes[0]);
+	}
+
+	turnright.onclick = function(){
+		var i = list.childNodes.length-1;
+		list.removeChild(list.childNodes[i]);
+	}
