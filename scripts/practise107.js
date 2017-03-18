@@ -1,13 +1,14 @@
 
-var content = document.getElementById('content').value;
+
 var imports =document.getElementById("imports");
-var sums = content.split("[、，。；？！,.;?!]");
+
 var list = document.getElementById("list");
 var source = document.getElementById("source");
 var search = document.getElementById("search");
 
 imports.onclick = function(){
-	
+	var content = document.getElementById('content').value;
+	sums = content.split("[、，。；？！,.;?!]");
 	for (var i = 0 ; i <sums[0].length; i++) {
 		var newlist = document.createElement('span');
 		newlist.innerText = sums[0][i];
