@@ -6,6 +6,8 @@
 	var turnright = document.getElementById("right-out");
 	var list = document.getElementById("list");
 	var newlist = document.createElement("li");
+	var figure = document.getElementById("figure");
+	var form = document.getElementById("form");
 
 	function newItem(){
 	
@@ -33,4 +35,15 @@
 	turnright.onclick = function(){
 		var i = list.childNodes.length-1;
 		list.removeChild(list.childNodes[i]);
+	}
+
+	figure.onclick = function(){
+		var a =document.createElement("div");
+		a.style.backgroundColor = "red";
+		for(j=0;j<list.childNodes.length;j++){
+			a.style.width = "20px";
+			var b = list.childNodes[j].value;
+			a.style.height = "bpx";
+		}
+
 	}
