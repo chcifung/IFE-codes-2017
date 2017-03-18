@@ -8,14 +8,18 @@
 	var newlist = document.createElement("li");
 	var figure = document.getElementById("figure");
 	var form = document.getElementById("form");
+	var compare = document.getElementById("compare");
+	var compares = document.getElementById("compares");
 
 	function newItem(){
 	
 		var textNode = document.createTextNode(number.value);
-	
-		newlist.appendChild(textNode);
-
+		if(number.value>9&&number.value<101){
+			newlist.appendChild(textNode);
+		}else{
+			alert("您输入数值范围不正确");
 		}
+	}
 
 	
 	left.onclick = function (){
@@ -38,12 +42,35 @@
 	}
 
 	figure.onclick = function(){
-		var a =document.createElement("div");
-		a.style.backgroundColor = "red";
-		for(j=0;j<list.childNodes.length;j++){
+		var lists = document.getElementsByTagName("li");
+		
+		for(var j=0;j<lists.length;j++){
+			var a =document.createElement("p");
 			a.style.width = "20px";
-			var b = list.childNodes[j].value;
-			a.style.height = "bpx";
+			var b = lists[j].innerText;
+			
+			a.style.height = b*4+"px";
+			a.style.background = "yellow";
+			a.style.left = j*25 +"px";
+			form.appendChild(a);
 		}
+		
+	}
 
+	compare.onclick = function(){
+		var a = [];
+		var lists = document.getElementsByTagName("li");
+		for(var k = 0;k<lists.length;k++){
+			a.push(lists[k].innerText);
+			a.sort();
+		}
+		for(var l=0;l<a.length;l++){
+			var b = document.createElement('span');
+			b.innerText = a[l];
+			console.log(b);
+			compares.appendChild(b);
+		}
+		
+
+		
 	}
