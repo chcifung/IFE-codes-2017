@@ -17,9 +17,17 @@ li{
 	position: relative;
 	float: left;
 	margin: 12px 1px 10px 1px;
-	width: 30px;
-	height: 22px;
+	width: 25px;
+	height: 20px;
 	background-color: red;
 	color: white;
 	text-align: center;
+}
+
+#form{
+	position: relative;
+	float: left;
+	width: 800px;
+	height: 400px;
+	background-color: #ccc;
 }
