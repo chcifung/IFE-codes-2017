@@ -6,7 +6,7 @@
 .container{
 	width: 800px;
 	height: 200px;
-	margin: 220px auto;
+	margin: 120px auto;
 }
 
 ul{
@@ -30,4 +30,26 @@ li{
 	width: 800px;
 	height: 400px;
 	background-color: #ccc;
+	margin-bottom: 20px;
+}
+
+#form>p{
+	position: absolute;
+	bottom: 0px;
+	float: left;
+	margin-left: 10px;
+}
+
+#compares{
+	position: relative;
+	float: left;
+	width: 800px;
+	height: 200px;
+	background-color: #eac;
+	margin-bottom: 200px;
+	color: green;
+}
+
+#compares>span{
+	margin: 6px;
 }
