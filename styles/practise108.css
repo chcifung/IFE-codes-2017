@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 920px;
+	height: 600px;
+	margin: 10% auto;
+}
+
+.tree{
+	display: flex;
+    border: 1px solid black;
+    width: 900px;
+    height: 250px;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tree div{
+	display: flex;
+	border: 1px solid black;
+	width: 44%;
+	height: 70%;
+	margin: auto auto;
+}
