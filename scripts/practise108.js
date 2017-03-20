@@ -2,44 +2,59 @@ var tree = document.getElementById("tree");
 var preorder = document.getElementById('preorder');
 var inorder = document.getElementById("inorder");
 var posorder = document.getElementById("posorder");
-var floororder = document.getElementById("floororder");
+var nodes = document.getElementsByTagName("div");
 var nodeArr = [];
 
 
 preorder.onclick = function(){
-	preOrder(tree);
+	preOrder(nodes);
 }
 
 function preOrder(node){
-	nodeArr.push(node);
-	node = nodeArr.shift();
-	console.log(node);
-	if(!node==null){
+	if(node!=null){
 		nodeArr.push(node);
 		preOrder(node.firstElementNode);
 		
 		preOrder(node.lastElementNode);
-
+		console.log(nodeArr[0]);
 	}
 
 }
 
-inorder.onclick = function inOrder(node){
-	if(!node==null){
+inorder.onclick = function(){
+	inOrder(nodes);
+}
+
+function inOrder(node){
+	nodeArr.push(node);
+	if(node!=null){
+
 		inOrder(node.firstElementNode);
 		nodeArr.push(node);
 		inOrder(node.lastElementNode);
+		console.log(nodeArr[0]);
 	}
-	console.log(node);
 }
 
-posorder.onclick = function posOrder(node){
-	if(!node==null){
+posorder.onclick = function(){
+	posOrder(nodes);
+	show();
+}
+
+function posOrder(node){
+	nodeArr.push(node);
+	if(node!=null){
 		posOrder(node.firstElementNode);
 		
 		posOrder(node.lastElementNode);
 		nodeArr.push(node);
+		console.log(nodeArr[0]);
 	}
-	console.log(node);
 }
 
+function show(){
+	for(var i=0;i<nodeArr[0].length;i++){
+		nodeArr[0][i].style.background = 'red';
+		setTimeout(console.log(nodeArr[0][i]),1000);
+	}
+}
