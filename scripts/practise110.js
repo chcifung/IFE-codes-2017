@@ -25,9 +25,10 @@ function show(){
 
 function breathFirst(node){
 	if(node){
-		breathFirst(arrNode.firstElementNode);
-		arrNode.push(node);
-		breathFirst(arrNode.lastElementNode);
+		for(var i = 0; i< node.length;i++){
+			var childs = node[i].children;
+			console.log(node[i]);
+		}
 	}
 }
 
@@ -35,7 +36,7 @@ function parseTreeJson(node){
 	if(node){
 		for(var i = 0; i< node.length;i++){
 			var childs = node[i].children;
-			console.log(node[i]);
+			
 		}
 	}
 }
