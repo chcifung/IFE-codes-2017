@@ -4,8 +4,10 @@
 }
 
 #main{
+	font-size: 16px;
+	text-align: center;
 	display: flex;
-	width: 1280px;
+	width: 1680px;
 	height: 360px;
 	border: 1px solid #913a6c;
 	margin: 120px auto;
@@ -13,9 +15,15 @@
 
 #main div{
 	display: flex;
-	width: 32%;
+	width: 38%;
 	height: 70%;
 	border: 1px solid #913a6c;
-	margin: auto 2px ;
+	margin: auto auto ;
 	padding: 2px;
+}
+
+.control{
+	width: 680px;
+	height: 60px;
+	margin: 20px auto;
 }
