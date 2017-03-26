@@ -1,12 +1,13 @@
 var main = document.getElementById("main");
 var traversal = document.getElementById("traversal");
-var deepfirst = document.getElementById('deepfirst');
-var breathfirst = document.getElementById("breathfirst");
 var search = document.getElementById("search");
 var nodes = main.getElementsByTagName("div");
 var last;
 var arrNode = [];
 arrNode.push(nodes);
+var strings = document.getElementById("strings");
+var add = document.getElementById("add");
+var deletes = document.getElementById("delete");
 
 function show(){//背景变色
 	for(var i = 0;i<arrNode[0].length;i++){
@@ -36,53 +37,13 @@ function traverSal(node){//递归遍历
 	}
 }
 
-function depthFirst(node){//非递归深度遍历
-	if(node){
-		var stack = [];
-		for(var i = 0; i< node.length; i++){
-			stack.push(node[i]);
-		}
-		var item;
-
-		while(stack.length){
-			item = stack.shift();
-			if(item.children&&item.children.length){
-				stack = item.children.concat(stack);
-			}
-		}
-	}
-}
-
-function breathFirst(node){//非递归广度遍历
-	var stack = [];
-	for(var i=0;i<node.length;i++){
-		stack.push(node[i]);
-	}
-
-	var item;
-	if(stack.length){
-		item = stack.shift();
-		if(item.children&&item.children.length){
-			stack = stack.concat(item.children);
-		}
-	}
-}
 
 traversal.onclick = function(){
 	traverSal(arrNode);
 	show();
 }
 
-deepfirst.onclick = function(){
-	depthFirst(arrNode);
-	show();
-	
-}
 
-breathfirst.onclick = function(){
-	breathFirst(arrNode);
-	show();
-}
 
 search.onclick = function(){
 	var a = document.getElementById("strings");
@@ -107,4 +68,46 @@ search.onclick = function(){
 		
 	}
 
+}
+
+
+function changeIt(){
+	for(i = 0; i <arrNode[0].length;i++){
+		arrNode[0][i].addEventListener("click",select);
+	}
+}
+
+changeIt();
+
+ function stopBubble(e) {
+        //如果提供了事件对象，则这是一个非IE浏览器
+        if ( e && e.stopPropagation )
+            //因此它支持W3C的stopPropagation()方法
+            e.stopPropagation();
+        else
+            //否则，我们需要使用IE的方式来取消事件冒泡
+            window.event.cancelBubble = true;
+    }
+
+
+
+function select(){
+	this.style.background = "#382389";
+	stopBubble(this);//防止时间冒泡
+	this.id = "selected";//添加一个类
+
+}
+
+add.onclick = function(){
+	var newNode = document.createElement("div");
+	newNode.innerText = strings.value;
+	console.log(newNode);
+	var des = document.getElementById("selected");
+	des.appendChild(newNode);
+}
+
+
+deletes.onclick = function(){
+	var a = document.getElementById("selected");//Dom需要先知道父元素才能删除某个子元素本身
+	a.parentNode.removeChild(a);
 }
