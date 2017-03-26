@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.container{
+	width: 800px;
+	height: 960px;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.row{
+	width: 800px;
+	height: 300px;
+	padding: 60px 0 0 0;
+	font-size: 28px;
+	font-family: "Yahei";
+
+}
+
+.row span{
+	margin-left: 80px;
+}
+
+.row input{
+	border-radius: 5px;
+	border-color: #eee;
+	margin-left: 30px;
+	width: 420px;
+	height: 48px;
+}
+
+.row button{
+	border-radius: 6px;
+	margin-left: 42px;
+	width: 88px;
+	height: 48px;
+	background-color: #0e7bef;
+	box-shadow: none;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+
+.holder{
+	font-size: 18px;
+	color: #aaa;
+	margin-left: 170px;
+}
