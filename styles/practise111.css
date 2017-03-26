@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#main{
+	font-size: 16px;
+	text-align: center;
+	display: flex;
+	width: 1680px;
+	height: 360px;
+	border: 1px solid #913a6c;
+	margin: 120px auto;
+}
+
+#main div{
+	display: flex;
+	width: 38%;
+	height: 70%;
+	border: 1px solid #913a6c;
+	margin: auto auto ;
+	padding: 2px;
+}
+
+.control{
+	width: 680px;
+	height: 60px;
+	margin: 20px auto;
+}
