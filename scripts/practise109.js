@@ -1,19 +1,22 @@
-var inputs = document.getElementById('inputs');
+
 var control = document.getElementById("control");
 
 control.onclick = function(){
-	var that = document.getElementsByClassName("up");
-	console.log(that);
+	var inputs = document.getElementById('inputs');
+	var that = document.getElementsByClassName("up")[0];
+	
 	if(inputs.value == "GO"){
-		var go;
-		go.id =that.id +1;
-		alert(go.id);
+		var a = that.id;
+		that.className = "";
+		a = a-10;
+		var go1 = document.getElementById(a);
+		go1.className = "up";
 	}else if(inputs.value == "TUN LEF"){
-		alert("2");
+		that.className = "left";
 	}else if(inputs.value == "TUN RIG"){
-		alert("3");
+		that.className = "right";
 	}else if (inputs.value == "TUN BAC") {
-		alert("4");
+		that.className = "down";
 	}else{
 		alert("输入的指令有误或为空!");
 	}
