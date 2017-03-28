@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+}
+
+.container{
+	width: 540px;
+	height: 1800px;
+	margin: 0 auto;
+}
+
+.container button{
+	width: 200px;
+	height: 60px;
+	border-radius: 10px;
+	background-color: #e63892;
+	color: white;
+	font-size: 28px;
+}
+
+.view{
+	position: fixed;
+	left: 42%;
+	top: 25%;
+	width: 320px;
+	height:232px;
+	z-index: 12;
+	background-color: white;
+	border: 1px solid #423;
+}
+
+#p1{
+	height: 32px;
+	background-color: #999;
+	color: white;
+	width: 320px;
+	text-align: center;
+	border: 1px solid #333;
+}
+
+#p2{
+	height: 150px;
+	width: 320px;
+}
+
+.view button{
+	width: 60px;
+	height: 30px;
+	float: right;
+	margin: 0 10px;
+	background-color: #999;
+	color: white;
+	border: 1px solid #333;
+}
+
+.model{/*这是一个半透明的遮罩层*/
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.3);
+	display: none;
+}
+
+
