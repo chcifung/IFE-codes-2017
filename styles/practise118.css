@@ -1,0 +1,19 @@
+table td{
+	width: 86px;
+	height: 36px;
+	border: 1px solid #aaa;
+	text-align: center;
+}
+
+#container{
+	width: 600px;
+	height: 300px;
+	margin: 20px auto;
+}
+
+th{
+	background-color: #666;
+	color: white;
+	height: 38px;
+	border: 1px solid black;
+}
