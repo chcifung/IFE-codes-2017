@@ -8,6 +8,7 @@ function sortTable(colNum) {
 		rowsArr[i] = tbody.rows[i];
 		colsArr[i] = rowsArr[i].cells[colNum];
 	}
+	console.log(colsArr);
 
 	//对表格中的数据进行排序
 	if(isSort[colNum]){
