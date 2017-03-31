@@ -13,6 +13,8 @@ var display = document.getElementById('display');
 var close = document.getElementById("close");
 var view = document.getElementsByClassName("view")[0];
 var model = document.getElementsByClassName("model")[0];
+var confirm = document.getElementById("confirm");
+var cancel = document.getElementById("cancel");
 
 display.onclick = function(){
 	view.style.display = "block";
@@ -27,4 +29,14 @@ close.onclick = function(){
 model.onclick = function(){
 	view.style.display = "none";
 	model.style.display = "none";
+}
+
+confirm.onclick = function(){
+    view.style.display = "none";
+    
+}
+
+cancel.onclick = function(){
+    view.style.display = "none";
+    
 }
