@@ -44,13 +44,13 @@ var intellence = document.getElementById("intellence");
 var wisdom = document.getElementById("wisdom");
 
 strength.onclick = function(){
-	sortTable(0);
-}
-
-intellence.onclick = function(){
 	sortTable(1);
 }
 
-wisdom.onclick = function(){
+intellence.onclick = function(){
 	sortTable(2);
+}
+
+wisdom.onclick = function(){
+	sortTable(3);
 }
