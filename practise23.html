@@ -7,10 +7,28 @@
 </head>
 <body>
 	<form>
-	<input type="radio" name="" class="less">
-	<input type="radio" name="" class="less"></br>
-	<input type="checkbox" name="">
-	<input type="checkbox" name="">
+		<div>
+			<h2>伪元素的实现</h2>
+			<div class="a">
+				<input type="radio" name="" class="less" id="less">
+				<label for="less"></label>
+			</div>
+			<div class="b">
+				<input type="checkbox" name="" class="more" id="more">
+				<label for="more"></label>
+			</div>
+		</div>
+		<div>
+			<h2>雪碧图的实现</h2><!--通过改变背景图的水平和竖子位置来显示-->
+			<div class="a">
+			<input type="radio" name="" class="sprit-radio" id="spirt-radio">
+			<label for="sprit-radio"></label>
+			</div>
+			<div class="b">
+			<input type="checkbox" name="" class="sprit-check" id="sprit-check">
+			<label for="sprit-check"></label>
+			</div>
+		</div>
 	</form>
 </body>
 </html>
