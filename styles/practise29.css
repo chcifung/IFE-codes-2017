@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+main{
+	width: 600px;
+	height: 480px;
+	margin: 20px auto;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+.test{
+	width: 540px;
+	height: 190px;
+	margin: 10px;
+	padding: 20px;
+	background-color: #ccc;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.test input{
+	width: 300px;
+	height: 30px;
+	font-size: 30px;
+	margin-top: 20px;
+	border: 0 none;
+}
+
+.test button{
+	width: 48px;
+	height: 30px;
+}
