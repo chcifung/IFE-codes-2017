@@ -7,9 +7,9 @@ var result2 = document.getElementById("result2");
 
 test1.onclick = function(){
 	var value1 = number.value;
-	var a = value1.split("");
-	var b = value1.replace(/[0-9]/g,"A");
-	if(a[0]==1&&(a[1]==3||a[1]==5||a[1]==8)&&a.length==11&&b=="AAAAAAAAAAA"){
+	var re = /(1[3]\d{9}|1[5]\d{9}|1[8]\d{9})/g;
+	var a  = re.test(value1);
+	if(a){
 		number.style.border = "2px solid green";
 		number.style.color = "green";
 		
@@ -23,4 +23,11 @@ test1.onclick = function(){
 
 test2.onclick = function(){
 	var value2 = letter.value;
+	var a  = value2.split(" ");
+	for(var i = 0;i<a.length;i++){
+		var result2 = value2.match(a[i]);
+		if(result2.length==null){
+			console.log("a");
+		}
+	}
 }
