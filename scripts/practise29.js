@@ -7,7 +7,7 @@ var result2 = document.getElementById("result2");
 
 test1.onclick = function(){
 	var value1 = number.value;
-	var re = /(1[3]\d{9}|1[5]\d{9}|1[8]\d{9})/g;
+	var re = /(1[3]\d{9}|1[5]\d{9}|1[8]\d{9}|1[7]\d{9})/g;
 	var a  = re.test(value1);
 	if(a){
 		number.style.border = "2px solid green";
