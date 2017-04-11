@@ -10,10 +10,16 @@
 <body>
 	<div class="container">
 		<div class="col-md-6 col-md-offset-3">
-			<h1>Vue shijian</h1>
+			<h1>Vue Practise</h1>
 			<div id="app">
 				<div>{{message.split("").reverse().join("")}}</div>
-				<input type="text" name="" v-model="message">
+				<input type="text" name="" v-model="message"><!--表单的使用-->
+				<tr v-for="book in books">
+					<td>{{book.id}}</td>
+					<td>{{book.name}}</td>
+					<td>{{book.author}}</td>
+					<td>{{book.price}}</td>
+				</tr>
 			</div>
 		</div>
 	</div>
