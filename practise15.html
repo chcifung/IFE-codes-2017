@@ -3,28 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Practise15</title>
-	<link rel="stylesheet" type="text/css" href="practise15.css">
+	<link rel="stylesheet" type="text/css" href="styles/practise15.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		
 </head>
 <body>
 	<div class="container">
 		<div class="col-md-6 col-md-offset-3">
-			<h1>Vue Practise</h1>
+			<h1>Vue Practise Demo</h1>
 			<div id="app">
-				<div>{{message.split("").reverse().join("")}}</div>
-				<input type="text" name="" v-model="message"><!--表单的使用-->
-				<tr v-for="book in books">
-					<td>{{book.id}}</td>
-					<td>{{book.name}}</td>
-					<td>{{book.author}}</td>
-					<td>{{book.price}}</td>
-				</tr>
+				<table id="apps" class="table">
+					<tr v-for="book in books ">
+						<td>{{book.id}}</td>
+						<td>{{book.name}}</td>
+						<td>{{book.author}}</td>
+						<td>{{book.price}}</td>
+					</tr>
+				</table>
+				
+			
+				<legend>添加书籍</legend>
+				<div class="form-group">
+					<label>书名</label>
+					<input type="text" name="" class="form-control" v-model="book.name">
+				</div>
+				<div class="form-group">
+					<label>作者</label>
+					<input type="text" name="" class="form-control" v-model="book.author">
+				</div>
+				<div class="form-group">
+					<label>价格</label>
+					<input type="text" name="" class="form-control" v-model="book.price">
+				</div>
+				<button class="btn btn-primary btn-block" v-on:click = "addBook()">Add Books</button>
 			</div>
-		</div>
 	</div>
 	
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
+	<script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="scripts/practise15.js"></script>
 </body>
