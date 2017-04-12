@@ -20,6 +20,10 @@ new Vue({
 			this.book.id = this.books.length+1;
 			this.books.push(this.book);
 			this.book = '';
-		} 
+		},
+		deleteBook:function(book){
+			this.books.$remove(book);
+		}
+
 	}
 })
