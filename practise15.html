@@ -38,8 +38,30 @@
 				</div>
 				<button class="btn btn-primary btn-block" v-on:click = "addBook()">Add Books</button>
 			</div>
+			<div id="myname">
+				<p>{{myname}}</p>
+			</div>
+			<div id="app-2">
+				<span v-bind:title="myname2">鼠标悬浮几秒查看这个信息</span>
+			</div>
+			<div id="app-3">
+				<p v-if="see">你现在看到我了</p>
+			</div>
+			<div id="app-4">
+				<ol>
+					<li v-for="todo in todos">{{todo.text}}</li>
+				</ol>
+			</div>
+			<div id="app-5">
+				<p>{{message}}</p>
+				<button v-on:click="reverseMessage">逆转消息</button>
+			</div>
+			<div id="app-6">
+				<p>{{message}}</p>
+				<input type="text" name="" v-model="message">
+			</div>
 	</div>
-	
+	</div>
 	<script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="scripts/practise15.js"></script>
