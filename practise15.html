@@ -60,8 +60,22 @@
 				<p>{{message}}</p>
 				<input type="text" name="" v-model="message">
 			</div>
+			<div id="app-7">
+				<ol>
+					<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+				</ol>
+			</div>
 	</div>
 	</div>
+	<div id="app-9">
+		<app-nav></app-nav>
+		<app-view>
+			<app-sidebar></app-sidebar>
+			<app-content></app-content>
+		</app-view>
+	</div>
+		
+	
 	<script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript" src="scripts/practise15.js"></script>
