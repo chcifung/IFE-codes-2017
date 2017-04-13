@@ -78,3 +78,18 @@ var app6 = new Vue({
 		message:"this is hello to Vue"
 	}
 })
+
+Vue.component('todo-item',{
+	props:['todo'],
+	template:'<li>{{todo.text}}</li>'
+})
+
+var app7 = new Vue({
+	el:"#app-7",
+	data:{
+		groceryList:[
+		{text:"fruit"},
+		{text:"bind"},
+		{text:"others"}]
+	}
+})
