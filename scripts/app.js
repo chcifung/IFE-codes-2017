@@ -1,4 +1,4 @@
-new Vue({ 
+var app = new Vue({ 
 	el: '#app', 
 	data: { 
 		book: { 
@@ -25,5 +25,56 @@ new Vue({
 			this.books.$remove(book);
 		}
 
+	}
+})
+
+var myname = new Vue({
+	el: '#myname',
+	data: {
+		myname: "this is my first vue display!"
+	}
+})
+
+var app2 = new Vue({
+	el:"#app-2",
+	data:{
+		myname2:"页面加载与"+new Date()
+	}
+})
+
+var app3 = new Vue({
+	el:"#app-3",
+	data:{
+		see: false
+	}
+})
+
+var app4 = new Vue({
+	el: "#app-4",
+	data:{
+		todos:[
+		{text:"this is a new"},
+		{text:"my first list"},
+		{text: "this is a order lists"}
+		]
+	}
+})
+
+var app5 = new Vue({
+	el:"#app-5",
+	data:{
+		message:"this is a test sentence!"
+	},
+	methods:{
+		reverseMessage: function(){
+			this.message = this.message.split("").reverse().join("");
+		}
+	}
+})
+
+var app6 = new Vue({
+	el:"#app-6",
+	data:{
+		message:"this is hello to Vue"
 	}
 })
