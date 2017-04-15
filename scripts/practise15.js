@@ -93,3 +93,38 @@ var app7 = new Vue({
 		{text:"others"}]
 	}
 })
+
+var app8 = new Vue({
+	el:"#app-8",
+	data:{
+		firstName: "jas",
+		lastName:"more",
+		fullName:"jas more"
+	},
+	computed:{
+		fullName:{
+			//getter
+			get:function(){
+				return this.firstName +" "+this.lastName;
+			},
+			//setter
+			set:function(newValue){
+				var names = newValue.split(" ");
+				this.firstName = names[0];
+				this.lastName = names[names.length-1];
+			}
+		}
+	}
+})
+
+var app9 = new Vue({
+	el:"#app-9",
+	data:{
+		message: 'Hello vuejs version 2.0'
+	},
+	computed:{
+		now: function(){
+			return Date.now();
+		}
+	}
+})
