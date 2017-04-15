@@ -65,13 +65,19 @@
 					<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
 				</ol>
 			</div>
+			<div id="app-8">
+				{{fullName}}
+			</div>
 	</div>
 	</div>
-	<div id="app-9">
+	<div id="app-9" class="col-md-6 col-md-offset-3">
 		<app-nav></app-nav>
 		<app-view>
 			<app-sidebar></app-sidebar>
-			<app-content></app-content>
+			<app-content>
+				<p>Original message: {{message}}</p>
+				<p>reverse messgae:{{now}}</p>
+			</app-content>
 		</app-view>
 	</div>
 		
