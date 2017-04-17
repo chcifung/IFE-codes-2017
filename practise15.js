@@ -1,3 +1,27 @@
+function Observer(data){
+	return new Proxy(data,{
+		get: function(target,key){
+			if(key in target){
+				console.log("ni guest the" + key);
+				return target[key];
+			}else{
+				console.log("keys does not exist")
+			}
+		},
+		set:function(target,key,newVal){
+			console.log("you have set the " + key);
+			console.log("new key " + key +"=" +newVal);
+			target[key]=newVal;
+		}
+	})
+}
+
+let app111 = new Observer({
+	name:"chcifung",
+	age: 24,
+	company: "telecom"
+})
+
 var app = new Vue({ 
 	el: '#app', 
 	data: { 
@@ -133,5 +157,51 @@ var app10 = new Vue({
 	el:"#app-10",
 	data:{
 		counter: 0
+	}
+})
+
+var app11 = new Vue({
+	el:"#app-11",
+	data:{
+		name:"Vue.js"
+	},
+	methods:{
+		greet:function(event){
+			alert("Hello " + this.name +"!");
+			alert(event.target.tagName)
+		}
+	}
+})
+
+var app12 = new Vue({
+	el:"#app-12",
+	methods:{
+		say:function(message){
+			alert(message)
+		},
+		warn:function(message,event){
+			if(event) event.preventDefault;
+			alert(message);
+		}
+	}
+})
+
+var app13 = new Vue({
+	el:"#app-13",
+	data:{
+		message:"",
+		checked: true,
+		checkNames:[],
+		picked:'',
+		selected:[],
+		selects:"a",
+		options:[{
+			text:"a",value:"one"
+		},{
+			text:'b',value:"two"
+		},{
+			text:"c",value:"three"
+		}],
+		toggle: false
 	}
 })
