@@ -128,3 +128,43 @@ var app9 = new Vue({
 		}
 	}
 })
+
+var app10 = new Vue({
+	el:"#app-10",
+	data:{
+		counter: 0
+	}
+})
+
+var app11 = new Vue({
+	el:"#app-11",
+	data:{
+		name:"Vue.js"
+	},
+	methods:{
+		greet:function(event){
+			alert("Hello " + this.name +"!");
+			alert(event.target.tagName)
+		}
+	}
+})
+
+var app12 = new Vue({
+	el:"#app-12",
+	methods:{
+		say:function(message){
+			alert(message)
+		},
+		warn:function(message,event){
+			if(event) event.preventDefault;
+			alert(message);
+		}
+	}
+})
+
+var app13 = new Vue({
+	el:"#app-13",
+	data:{
+		message:""
+	}
+})
