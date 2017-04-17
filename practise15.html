@@ -68,6 +68,24 @@
 			<div id="app-8">
 				{{fullName}}
 			</div>
+			<div id = "app-10" >
+				<button v-on:click="counter +=1">Add one</button>
+				<p>{{counter}}</p>
+			</div>
+			<div id="app-11">
+				<button v-on:click="greet">Greet</button>
+			</div>
+			<div id="app-12">
+				<button v-on:click="say('hi')">say hi</button>
+				<button v-on:click="say('what')">say what</button>
+				<button v-on:click.stop="warn('form can not be submit yet',$event)">submit</button>
+			</div>
+			<div id="app-13">
+				<input type="text" name="" v-model="message">
+				<p>{{message}}</p>
+				<textarea placeholder="this is a mulitplacer" v-model = "message"></textarea>
+			</div>
+			
 	</div>
 	</div>
 	<div id="app-9" class="col-md-6 col-md-offset-3">
