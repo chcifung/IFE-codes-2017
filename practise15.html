@@ -98,12 +98,20 @@
 				<input type="radio" name="" value="two" id="two" v-model="picked">
 				<label for="two">Two</label>
 				<span>this choose is {{picked}}</span></br>
-				<select v-model="selected">
+				<select v-model="selected" multiple>
 					<option>A</option>
 					<option>B</option>
 					<option>C</option>
 				</select>
 				<span>this is choose be {{selected}}</span>
+				<select v-model="selects">
+					<option v-for="option in options" v-bind:value="option.value">
+						{{option.value}}
+					</option>
+				</select>
+				<span>this is be choosed: {{selects}}</span></br>
+				<input type="checkbox" v-model = "toggle" name="" v-bind:true-value="a" v-bind:false-value="b">
+				
 			</div>
 			
 	</div>
