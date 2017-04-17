@@ -84,6 +84,26 @@
 				<input type="text" name="" v-model="message">
 				<p>{{message}}</p>
 				<textarea placeholder="this is a mulitplacer" v-model = "message"></textarea>
+				<input type="checkbox" name="" id="checkbox" v-model="checked">
+				<label for="checkbox">{{checked}}</label>
+				<input type="checkbox" name="" id="john" value="john" v-model = "checkNames">
+				<label for="john">John</label>
+				<input type="checkbox" name="" id="Bob" value="Bob" v-model = "checkNames">
+				<label for="Bob">Bob</label>
+				<input type="checkbox" name="" id="Alice" value="Alice" v-model = "checkNames">
+				<label for="Alice">Alice</label>
+				<span>this is be checked {{checkNames}}</span></br>
+				<input type="radio" name="" value="one" id="one" v-model="picked">
+				<label for="one">One</label>
+				<input type="radio" name="" value="two" id="two" v-model="picked">
+				<label for="two">Two</label>
+				<span>this choose is {{picked}}</span></br>
+				<select v-model="selected">
+					<option>A</option>
+					<option>B</option>
+					<option>C</option>
+				</select>
+				<span>this is choose be {{selected}}</span>
 			</div>
 			
 	</div>
