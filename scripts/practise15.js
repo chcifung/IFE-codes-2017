@@ -169,6 +169,15 @@ var app13 = new Vue({
 		checked: true,
 		checkNames:[],
 		picked:'',
-		selected:null
+		selected:[],
+		selects:"a",
+		options:[{
+			text:"a",value:"one"
+		},{
+			text:'b',value:"two"
+		},{
+			text:"c",value:"three"
+		}],
+		toggle: false
 	}
 })
