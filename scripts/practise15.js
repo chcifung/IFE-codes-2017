@@ -1,3 +1,36 @@
+function Observer(data){
+	return new Proxy(data,{
+		get: function(target,key){
+			if(key in target){
+				console.log("ni guest the" + key);
+				return target[key];
+			}else{
+				console.log("keys does not exist")
+			}
+		},
+		set:function(target,key,newVal){
+			console.log("you have set the " + key);
+			console.log("new key " + key +"=" +newVal);
+			target[key]=newVal;
+		}
+	})
+}
+
+let app111 = new Observer({
+	name:"chcifung",
+	age: 24,
+	company: "telecom"
+})
+/*var proxy = new Proxy({},{
+        get:function(target,property){
+        return 35;
+    }
+});
+
+proxy.time;//35
+proxy.name;//35
+proxy.title;//35*/
+
 var app = new Vue({ 
 	el: '#app', 
 	data: { 
