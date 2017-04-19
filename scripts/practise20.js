@@ -1,17 +1,33 @@
- function Observer(data){
- 	return new Proxy(data,{
- 		get:function(target,key){
- 			if(key in target){
- 				console.log("you visit the " +key);
- 				return target[key];
- 			}else{
- 				 throw new Error("you have the wrong visit");
- 			}
- 		},
- 		set:function(target,key,newVal){
- 			console.log("you set a new " +key);
- 			console.log("new" + key + "=" +newVal);
- 			target[key]=newVal;
- 		}
- 	})
- }
+function Observer(data){
+	this.data = data;
+	this.makeObserver(data);
+}
+
+Observer.prototype.setterAndGetter=function(key,val){
+	Object.defineProperty(this.data,key,{
+		enumerable:true,
+		configurable:true,
+		get:function(){
+			console.log("you visit the " + key);
+			return val;
+		},
+		set:function(newVal){
+			console.log("you have set the new "+key);
+			console.log("new " +key+"is" +newVal);
+			val = newVal;
+		}
+	})
+}
+
+Observer.prototype.makeObserver = function(obj){
+	let val;
+	for(let key in obj){
+		if(obj.hasOwnProperty(key)){
+			val = obj[key];
+			if(typeof val === 'object'){
+				new Observer(val);
+			}
+		}
+		this.setterAndGetter(key,val);
+	}
+}
