@@ -7,14 +7,21 @@
 	
 </head>
 <body>
-	<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
-  <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
-</audio>
+	<main>
+		<h1>Title</h1>
+		<h2>Singer</h2>
+		<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" controls="controls" autobuffer id="audio" >
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<div id="controls">
+			<button id="playpause" title="play">Play</button>
+		</div>
+		<img src="https://img3.doubanio.com/lpic/s3511474.jpg" id="poster">
+	</main>
 
 
 
-	
+
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/practise83.js"></script>
