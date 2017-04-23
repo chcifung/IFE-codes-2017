@@ -15,7 +15,8 @@ main{
 #poster{
 	position: absolute;
 	float: right;
-	right: 110px;
+	right: 90px;
+	top: 80px;
 	width: 280px;
 	height: 280px;
 	border: none;
@@ -26,7 +27,17 @@ audio{
 	margin-top: 80px;
 }
 
-h1,h5{
+h2,h5{
 	margin-top: 20px;
 	color: #999;
+}
+
+.glyphicon{
+	font-size: 28px;
+}
+
+.progress{
+	width: 380px;
+	color: green;
+	height: 4px;
 }
