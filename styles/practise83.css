@@ -2,3 +2,31 @@
 	margin: 0;
 	padding:0;
 }
+
+main{
+	position: relative;
+	width: 860px;
+	height: 480px;
+	background-color: rgb(225,225,225);
+	margin: 0 auto;
+	padding: 60px;
+}
+
+#poster{
+	position: absolute;
+	float: right;
+	right: 110px;
+	width: 280px;
+	height: 280px;
+	border: none;
+	border-radius: 140px;
+}
+
+audio{
+	margin-top: 80px;
+}
+
+h1,h5{
+	margin-top: 20px;
+	color: #999;
+}
