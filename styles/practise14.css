@@ -1,0 +1,7 @@
+main{
+	background-image: url(../images/bear.jpg);
+	width: 600px;
+	height: 480px;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
