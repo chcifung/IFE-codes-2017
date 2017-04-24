@@ -41,3 +41,15 @@ h2,h5{
 	color: green;
 	height: 4px;
 }
+
+#volume{
+	width: 280px;
+}
+
+#controls span{
+	margin-right: 30px;
+}
+
+.glyphicon-play,.glyphicon-pause{
+	margin-left: 120px;
+}
