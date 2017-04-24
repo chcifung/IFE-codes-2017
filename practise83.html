@@ -16,19 +16,13 @@
 		<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autobuffer id="audio" >
 			Your browser does not support the <code>audio</code> element.
 		</audio>
-			<input type="range" name="volume" id="volume" min="0" max="1" step="0.01" onchange="setVolume()">
-			<button id= title="volume" class="btn btn-default">
-				<span class="glyphicon glyphicon-volume-off"></span>
-				<span class="glyphicon glyphicon-volume-down"></span>
-				<span class="glyphicon glyphicon-volume-up"></span>
-			</button>
-			
+			<span id="volume" class="glyphicon glyphicon-volume-down"><input type="range" name="volume"  min="0" max="1" step="0.01" onchange="setVolume()"></span>	
 				<span class="glyphicon glyphicon-share"></span>
 			
 			
 				<span class="glyphicon glyphicon-download-alt"></span>
 		<div class="progress">
-		  <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"> </div>
+		  <div class="progress-bar" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"> </div>
 		</div>
 		<img src="https://img3.doubanio.com/lpic/s3511474.jpg" id="poster">
 		<div id="controls">	
