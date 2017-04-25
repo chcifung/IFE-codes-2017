@@ -1,12 +1,52 @@
-main{
+#background{
+	position: relative;
 	background-image: url(../images/bear.jpg);
 	width: 480px;
 	height: 360px;
 	background-repeat: no-repeat;
 	margin: 0 auto;
 	text-align: center;
-	padding-top: 110px;
+	padding-top: 100px;
 	line-height: 30px;
-	font-size: 20px;
+	font-size: 30px;
+}
+
+div>a{
+	opacity: 0;
+	text-decoration: none;
+	-webkit-transition:opacity 1s linear; 
+    transition:opacity 2s linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    background-image:-webkit-linear-gradient(left,yellow 0%,green 25%,red 50%,blue 75%,yellow 100%);
+    background-size:200% 100%;
+}
+
+#figure:hover a{
+	opacity: 1;
+	animation:gradient 2s linear infinite;
+}
+
+@keyframes gradient{
+        from{background-position:0% 0%;}
+        to{background-position:-100% 0%;}
+}
+
+#figure::before{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background:url(../images/bear.jpg);
+        background-repeat: no-repeat;
+        border-radius:5px;
+        -webkit-transition:filter 2s linear;
+        transition:filter 2s linear;
+}
+
+#figure:hover::before{
+        filter:blur(5px);
 }
 
